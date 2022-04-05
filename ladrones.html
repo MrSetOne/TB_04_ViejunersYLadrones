@@ -13,23 +13,99 @@
         <h1>Los ladronzuelos de bicicletas</h1>
         <nav>
             <ul>
-                <li><a href="./index.html">El club viejuner</a></li>
-                <li><a href="./ladrones.html">Los ladronzuelos de bicicletas</a></li>
+                <li><a href="./index.html" tabindex="10">El club viejuner</a></li>
+                <li><a href="./ladrones.html" tabindex="11">Los ladronzuelos de bicicletas</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <form action="post">
-            <label for="Dia">Dia </label>
-            <input type="date" name="Dia" id="Dia" min="2022-04-05">
-            <label for="Hora">Hora: </label><input type="time" name="Hora" id="Hora">
-            <br>
-            <label for="BiciColor">Color de la bicicleta</label><input type="color" name="BiciColor" id="BiciColor">
-            <br>
-            <label for="Price">Rango de precio</label><input type="range" name="Price" id="Price">
-            <br>
-            <!-- Falta (Tipo de bicicleta: selector) -->
+            <fieldset>
+                <legend>Los ladronzuelos de bicicletas</legend>
+                <label for="Dia">Dia </label>
+                <input autofocus required type="date" name="Dia" id="Dia" min="2022-04-05" tabindex="1">
+                <label for="Hora">Hora: </label>
+                <input type="time" name="Hora" id="Hora" tabindex="2" required>
+                <br>
+                <label for="BiciColor">Color de la bicicleta</label>
+                <input type="color" name="BiciColor" id="BiciColor" tabindex="3" required>
+                <br>
+                <label for="Price">Rango de precio</label>
+                <!-- La database del range aun no la soporta chrome (Una pena, me hacia ilusion probarlo) -->
+                <input type="range" list="pprecios" name="Price" id="Price" tabindex="4" min="0" max="5000" step="500">
+                <datalist id="pprecios">
+                    <option value="0" label="0€">
+                    <option value="500">
+                    <option value="1000">
+                    <option value="1500">
+                    <option value="2000">
+                    <option value="2500" label="2500€">
+                    <option value="3000">
+                    <option value="3500">
+                    <option value="4000">
+                    <option value="4500">
+                    <option value="5000" label="5000€">
+                </datalist>
+                <br>
+                <label for="TypeBici">Tipos de bicicleta</label>
+                <select name="TypeBici" id="TypeBici" tabindex="5" required>
+                    <optgroup label="Paseo">
+                        <option value="Señorial">Señorial</option>
+                        <option value="Anti-plebeyos">Anti-plebeyos</option>
+                        <option value="PorEncimaDelHombro">PorEncimaDelHombro</option>
+                    </optgroup>
+                    <optgroup label="Montaña">
+                        <option value="Gamusinos">Gamusinos</option>                        <option value="Hueleflores_premium">Hueleflores premium</option>
+                        <option value="Fango_lover">Fango lover</option>
+                    </optgroup>
+                    <optgroup label="Carreras">
+                        <option value="Metroymedio">Metroymedio</option>
+                        <option value="3_de_la_tarde_Fluorescente_edition">3 de la tarde. Fluorescente edition</option>
+                        <option value="Grupitors">Grupitors</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label for="Accesories">Accesorios<sub>(Presiona ctrl para seleccionar varios)</sub></label>
+                <select required name="Accesories" id="Accesories" multiple tabindex="6">
+                    <option value="Ruedines">Ruedines</option>
+                    <option value="Pegatinas">Pegatinas</option>
+                    <option value="Cestita">Cestita</option>
+                    <option value="Bomba_de_aire">Bomba de aire</option>
+                    <option value="Timbre">Timbre</option>
+                    <option value="Foco">Foco</option>
+                </select>
+                <br>
+                <label for="mark">¿Que marca es?</label>
+                <input list="marcas" name="mark" placeholder="Selecciona tu marca" tabindex="7">
+                <datalist id="marcas">
+                    <option value="specialized">
+                    <option value="trek">
+                    <option value="merida">
+                    <option value="scott">
+                    <option value="giant">
+                    <option value="cube">
+                    <option value="lapierre">
+                    <option value="orbea">
+                    <option value="cannondale">
+                    <option value="bmc">
+                    <option value="canyon">
+                    <option value="look">
+                    <option value="protek">
+                    <option value="megamo">
+                    <option value="pinarello">
+                    <option value="bianchi">
+                    <option value="bh">
+                    <option value="factor">
+                    <option value="ghost">
+                    <option value="cervélo">
+                    <option value="argon">
+                </datalist>
+                <!-- Menudo entretenimiento copiando y pegando jajajaja -->
+                <br>
+                <input type="submit" value="Submit" tabindex="8">
+                <input type="reset" value="Reset" tabindex="9">
 
+            </fieldset>
         </form>
     </main>
 </body>
