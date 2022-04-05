@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El club viejuner</title>
+</head>
+
+<body>
+    <header>
+        <h1>El club viejuner</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">El club viejuner</a></li>
+                <li><a href="./ladrones.html">Los ladronzuelos de bicicletas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="post">
+            <h2>Tú</h2>
+            <label for="Nombre">Nombre</label>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Tu nombre">
+            <br>
+            <label for="LastName">Apellidos</label>
+            <input type="text" name="LastName" id="LastName" placeholder="Tu apellido">
+            <br>
+            <label for="Age">Edad</label>
+            <input placeholder="Minimo 65 años" type="number" name="Age" id="Age" step="1" min="65">
+            <br>
+            <input type="checkbox" name="CheckOld" id="CheckOld">
+            <label for="CheckOld">Me siento viejuner</label>
+            <br>
+            <label for="AboutYou">Escribe algo sobre tí:</label>
+            <br>
+            <textarea placeholder="Escribe aqui..." name="AboutYou" id="AboutYou" cols="30" rows="10"></textarea>
+            <h2>Tus circunstacias</h2>
+            <label for="mail">Correo electronico </label><input placeholder="Tu correo..." type="email" name="mail" id="mail">
+            <br>
+            <label for="Phone">Telefono<input type="tel" name="Phone" id="Phone"></label>
+        </form>
+
+    </main>
+</body>
+
+</html>
